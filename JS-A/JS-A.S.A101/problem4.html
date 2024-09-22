@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <section class="preview"></section>
+</body>
+<script>
+    // Add your code here
+    function mul(num1, num2) {
+        const bigNum1 = BigInt(num1);
+        const bigNum2 = BigInt(num2);
+
+        const product = bigNum1 * bigNum2;
+
+        return product.toString();
+    }
+
+    // Don't edit the code below here!
+
+    const result = mul(12345678910111213, 89);
+    console.log(result);
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = `${result}`;
+
+    section.appendChild(para1);
+</script>
+
+</html>

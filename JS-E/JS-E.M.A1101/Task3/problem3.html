@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Task 3</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <section class="preview"></section>
+    <div id="div13">This is div line 13</div>
+    <button id="back" type="button">Back</button>
+    <button id="next" type="button">Next</button>
+    <id id="imageContainer">
+    </id>
+</body>
+<script>
+    const imageContainer = document.querySelector('#div13');
+    const backBtn = document.querySelector('#back')
+    const nextBtn = document.querySelector('#next');
+
+    const images = [
+  'https://www.onu.ro/wp/wp-content/uploads/2020/03/react-native-logo-768x890.png',
+  'https://jocumpr.com.br/wp-content/uploads/2021/08/logo-pix-icone-1024.png',
+  'https://th.bing.com/th/id/R.f725811e5ed26253868a1db03976d00d?rik=rfyUrfzeX3Ht2w&pid=ImgRaw&r=0',
+];
+
+    function renderImage(index) {
+        const imageContainer = document.querySelector('#imageContainer');
+        const imgElement = document.createElement('img');
+        imgElement.src = images[index];
+        imageContainer.innerHTML = '';
+        imageContainer.appendChild(imgElement);
+    }
+
+    let index = 0;
+
+    function handleBackButtonClick() {
+        index--;
+        if (index < 0) {
+            index = images.length - 1;
+        }
+        renderImage(index);
+    }
+
+    function handleNextButtonClick() {
+        index++;
+        if (index >= images.length) {
+            index = 0;
+        }
+        renderImage(index);
+    }
+
+    backBtn.addEventListener('click', handleBackButtonClick);
+    nextBtn.addEventListener('click', handleNextButtonClick);
+
+    // Don't edit the code below here!
+</script>
+
+</html>

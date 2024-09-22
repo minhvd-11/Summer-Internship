@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document<</title>
+  </head>
+
+  <body>
+    <section class="preview"></section>
+  </body>
+  <script>
+    let cat = {
+      name: "Bertie",
+      breed: "Cymric",
+      color: "white",
+      greeting: function () {
+        const s = `Hello, said ${this.name} the ${this.breed}`;
+
+        console.log(s);
+      },
+    };
+
+    const cat2 = {
+      name: "Kitty",
+      breed: "Maine Coon",
+      color: "black",
+      greeting: cat.greeting,
+    };
+
+    cat.greeting();
+    cat2.greeting();
+  </script>
+</html>

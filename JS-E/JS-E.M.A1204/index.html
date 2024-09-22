@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p {
+        color: red;
+    }
+    
+    #success {
+        color: green;
+    }
+</style>
+
+<body>
+    <form action="#" onsubmit="return validateForm()">
+        <h1>
+            Registration form
+        </h1>
+        <p id="success"></p>
+        <label for="username">username:</label>
+        <br>
+        <input type="text" class="username" id="username">
+        <p id="alert_username"></p>
+        <label for="password">password:</label>
+        <br>
+        <input type="password" class="password" id="password">
+        <p id="alert_password"></p>
+        <label for="re_password">confirm your password:</label>
+        <br>
+        <input type="password" class="re_password" id="re_password">
+
+        <p id="alert_re_password"></p>
+        <button id="button">register</button>
+    </form>
+
+
+</body>
+<script src="./index.js">
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var re_password = document.getElementById("re_password").value;
+        let check = true;
+
+        if (username == "") {
+            document.getElementById("alert_username").textContent = "User is required";
+            check = false;
+        } else {
+            document.getElementById("alert_username").textContent = "";
+        }
+        if (password == "") {
+            document.getElementById("alert_password").textContent = "Pass is required";
+            check = false;
+        } else {
+            document.getElementById("alert_password").textContent = "";
+        }
+        if (re_password == "") {
+            document.getElementById("alert_re_password").textContent = "Re_Pass is required";
+            check = false;
+        } else {
+            document.getElementById("alert_re_password").textContent = "";
+        }
+        if (password != re_password && (password != "" && re_password != "" && username != "")) {
+            document.getElementById("alert_re_password").textContent = "Password and confirm password do not match"
+            check = false;
+        }
+
+        if (check == true) {
+            document.getElementById("success").textContent = "You have registered successfully";
+        } else {
+            document.getElementById("success").textContent = "";
+        }
+    }
+</script>
+
+</html>

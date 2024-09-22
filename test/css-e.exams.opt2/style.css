@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --main-color: #00b4d9;
+  --background-color: #f3f3f3;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 1em;
+  border: solid 0px var(--main-color);
+  border-radius: 0.4em 0.4em;
+  padding: 1em 2em;
+}
+
+button.active {
+  background-color: white;
+  color: var(--main-color);
+  border: solid 1px var(--main-color);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: bold;
+  margin: 0 8%;
+}
+
+div.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.logo p {
+  margin-left: 10px;
+  color: var(--main-color);
+  font-size: 24px;
+}
+
+.navbar-items {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.navbar-items li {
+  margin: 0 15px;
+}
+
+.navbar-items a {
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+.navbar-items a:hover {
+  color: var(--main-color);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section > h1 {
+  font-size: 2em;
+}
+
+section.hero {
+  background-image: url(./resources/hero.jpg);
+  height: max-content;
+  background-position: center;
+  background-size: cover;
+  align-items: unset;
+}
+
+div.hero-text {
+  padding: 8%;
+  display: flex;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hero-text h2 {
+  font-weight: 300;
+  font-size: 3.6em;
+  margin: 0;
+}
+
+.hero h1 {
+  font-size: 5.4em;
+  margin: 0;
+}
+
+.hero h4 {
+  font-weight: 300;
+  font-size: 2em;
+  margin: 0;
+}
+
+.hero-icon {
+  margin: 30px;
+  font-size: 2em;
+}
+
+.hero-icon i {
+  margin: 0 10px;
+}
+
+section.job {
+  background-color: var(--background-color);
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.2em 0.2em;
+  box-shadow: 0px 0px 6px 2px rgba(101, 100, 100, 0.511);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  text-align: center;
+  padding: 5px 20px;
+}
+
+.card h3,
+p {
+  margin: 4px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  padding: 10px;
+}
+
+.gallery img {
+  width: 360px;
+  height: 280px;
+  display: block;
+}
+
+.contact {
+  background-color: var(--background-color);
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+}
+
+footer .hero-icon {
+  font-size: 20px;
+  margin: 5px;
+}
+
+footer p {
+  text-align: center;
+}
+
+@media screen and (max-width: 1060px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    padding: 4px;
+  }
+}

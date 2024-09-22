@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <section class="preview"></section>
+</body>
+<script>
+    // Add your code here
+    function snakeToPascal(s) {
+        return s.split('_')
+            .map(substr => substr.charAt(0).toUpperCase() + substr.slice(1))
+            .join('');
+    }
+    // Don't edit the code below here!
+    const input = 'user_name';
+    const output = snakeToPascal(input);
+    console.log(output);
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = `${input} -> ${output}`;
+
+    section.appendChild(para1);
+</script>
+
+</html>

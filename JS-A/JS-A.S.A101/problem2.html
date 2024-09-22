@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <section class="preview"></section>
+</body>
+<script>
+    // Add your code here
+    function swap(a, b) {
+        var tmp = a;
+        a = b;
+        b = tmp;
+    }
+
+    var x = 1;
+    var y = 2;
+    swap(x, y);
+    console.log(x); // ??
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    para1.textContent = `${x}`;
+
+    section.appendChild(para1);
+</script>
+
+</html>

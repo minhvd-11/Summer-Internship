@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <section class="preview"></section>
+</body>
+<script>
+    // Add your code here
+    var a = 1;
+    function b() {
+        a = 10;
+        return;
+        function a() { }
+    }
+    b();
+    console.log(a);
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = `a: ${a}`;
+
+    section.appendChild(para1);
+</script>
+
+</html>

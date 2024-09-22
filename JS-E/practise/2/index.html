@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>Tax</th>
+            <th>Total</th>
+        </tr>
+        <tr id="row1">
+            <td><img src="./camera.png" alt="" srcset=""></td>
+            <td>
+                Massa AST Color : black ,Material:metal;
+            </td>
+            <td>
+                <input type="text" name="quantity" id="quantity1" value="1">
+                <button class="decrement" onclick="decrement('quantity1','row1')" style="border: 1px solid whitesmoke;">-</button>
+                <button class="increment" onclick="increment('quantity1','row1')" style="border: 1px solid whitesmoke;">+</button>
+                <button class="delete" onclick="deleteValue('quantity1','row1')" style="background:red;">x</button>
+            </td>
+            <td>
+                <span id="price">$121.00</span>
+            </td>
+            <td>$25.00</td>
+            <td>$15.00</td>
+            <td>$110.00</td>
+        </tr>
+        <tr id="row2">
+            <td><img src="./camera.png" alt="" srcset=""></td>
+            <td>
+                Massa AST Color : black ,Material:metal;
+            </td>
+            <td>
+                <input type="text" name="quantity" id="quantity2" value="1">
+                <button class="decrement" onclick="decrement('quantity2','row2')" style="border: 1px solid whitesmoke;">-</button>
+                <button class="increment" onclick="increment('quantity2','row2')" style="border: 1px solid whitesmoke;">+</button>
+                <button class="delete" onclick="deleteValue('quantity2','row2')" style="background:red;">x</button>
+                <td>$122.00</td>
+                <td>$25.00</td>
+                <td>$15.00</td>
+                <td>$110.00</td>
+        </tr>
+        <tr id="row3">
+            <td><img src="./camera.png" alt="" srcset=""></td>
+            <td>
+                Massa AST Color : black ,Material:metal;
+            </td>
+            <td>
+                <input type="text" name="quantity" id="quantity3" value="1">
+                <button class="decrement" onclick="decrement('quantity3','row3')" style="border: 1px solid whitesmoke;">-</button>
+                <button class="increment" onclick="increment('quantity3','row3')" style="border: 1px solid whitesmoke;">+</button>
+                <button class="delete" onclick="deleteValue('quantity3','row3')" style="background:red;">x</button>
+                <td>$123.00</td>
+                <td>$25.00</td>
+                <td>$15.00</td>
+                <td>$110.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;">Total Price</td>
+            <td>$228.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;">Total Discount</td>
+            <td>$50.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;">Total Tax</td>
+            <td>$31.00</td>
+        </tr>
+    </table>
+</body>
+<script src="./index.js"></script>
+<script src="./index2.js"></script>
+
+</html>
